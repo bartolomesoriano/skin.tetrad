@@ -249,7 +249,7 @@
 						<item>
 							<label>20077</label>
 							<label2>31406</label2>
-							<onclick>ActivateWindow(1200)</onclick>
+							<onclick>ActivateWindow(SkinSettings)</onclick>
 							<icon>special://skin/button_icons/icon-skin.png</icon>
 							<thumb>-</thumb>
 						</item>

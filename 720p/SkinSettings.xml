@@ -1,4 +1,4 @@
-<window id="1200">
+<window>
 	<defaultcontrol always="true">3</defaultcontrol>
 	<controls>
 		<include condition="!Skin.HasSetting(DontBlendBackground)">CommonVideoVizBackground</include>

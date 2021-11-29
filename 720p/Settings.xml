@@ -228,7 +228,7 @@
 						<item>
 							<label>705</label>
 							<label2>31403</label2>
-							<onclick>ActivateWindow(NetworkSettings)</onclick>
+							<onclick>ActivateWindow(servicesettings)</onclick>
 							<icon>special://skin/button_icons/icon-network.png</icon>
 							<thumb>-</thumb>
 						</item>

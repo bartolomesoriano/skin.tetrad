@@ -144,12 +144,15 @@
 					<onleft>50</onleft>
 					<onright>50</onright>
 					<onup>14</onup>
-					<ondown>19</ondown>
+					<ondown condition="Control.IsVisible(19)">19</ondown>
+					<ondown condition="Control.IsVisible(20)">20</ondown>
 				</control>
-				<control type="radiobutton" id="19">
+				<control type="edit" id="19">
+					<visible>Container.CanFilter + !Container.CanFilterAdvanced</visible>
 					<description>Filter</description>
 					<posx>8</posx>
 					<posy>160</posy>
+					<textwidth>230</textwidth>
 					<include>ButtonCommonValues</include>
 					<label>587</label>
 					<onleft>50</onleft>
@@ -157,6 +160,21 @@
 					<onup>8</onup>
 					<ondown>16</ondown>
 				</control>
+				<control type="radiobutton" id="20">
+					<visible>Container.CanFilterAdvanced</visible>
+					<description>Filter</description>
+					<posx>8</posx>
+					<posy>160</posy>
+					<include>ButtonCommonValues</include>
+					<label>587</label>
+					<selected>Container.Filtered</selected>
+					<onclick>Filter</onclick>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<onup>8</onup>
+					<ondown>16</ondown>
+				</control>
+				
 				<control type="radiobutton" id="16">
 					<description>PartyMode</description>
 					<posx>10</posx>
@@ -165,7 +183,8 @@
 					<label>589</label>
 					<onleft>50</onleft>
 					<onright>50</onright>
-					<onup>19</onup>
+					<onup condition="Control.IsVisible(19)">19</onup>
+					<onup condition="Control.IsVisible(20)">20</onup>
 					<ondown>17</ondown>
 				</control>
 				<control type="radiobutton" id="17">

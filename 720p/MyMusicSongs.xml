@@ -102,7 +102,8 @@
 					<onleft>50</onleft>
 					<onright>4</onright>
 					<onup>2</onup>
-					<ondown>99</ondown>
+					<ondown condition="Control.IsVisible(19)">19</ondown>
+					<ondown condition="Control.IsVisible(20)">20</ondown>
 				</control>
 				<control type="togglebutton" id="4">
 					<description>Sort asc</description>
@@ -117,19 +118,48 @@
 					<onleft>3</onleft>
 					<onright>50</onright>
 					<onup>2</onup>
+					<ondown condition="Control.IsVisible(19)">19</ondown>
+					<ondown condition="Control.IsVisible(20)">20</ondown>
+				</control>
+				<control type="edit" id="19">
+					<visible>Container.CanFilter + !Container.CanFilterAdvanced</visible>
+					<description>Filter</description>
+					<posx>2</posx>
+					<posy>80</posy>
+					<textwidth>190</textwidth>
+					<include>ButtonCommonValues</include>
+					<label>587</label>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<onup>3</onup>
+					<ondown>99</ondown>
+				</control>
+				<control type="radiobutton" id="20">
+					<visible>Container.CanFilterAdvanced</visible>
+					<description>Filter</description>
+					<posx>2</posx>
+					<posy>80</posy>
+					<include>ButtonCommonValues</include>
+					<label>587</label>
+					<selected>Container.Filtered</selected>
+					<onclick>Filter</onclick>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<onup>3</onup>
 					<ondown>99</ondown>
 				</control>
 				<control type="radiobutton" id="99">
 					<description>Library button</description>
 					<posx>4</posx>
-					<posy>80</posy>
+					<posy>120</posy>
 					<label>$LOCALIZE[29800]</label>
 					<onclick>ReplaceWindow(MusicLibrary)</onclick>
 					<selected>Window.IsVisible(MusicLibrary)</selected>
 					<include>ButtonCommonValues</include>
 					<onleft>50</onleft>
 					<onright>50</onright>
-					<onup>3</onup>
+					<onup condition="Control.IsVisible(19)">19</onup>
+					<onup condition="Control.IsVisible(20)">20</onup>
 					<ondown>610</ondown>
 					<enable>Library.HasContent(Music)</enable>
 				</control>

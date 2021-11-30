@@ -21,7 +21,7 @@
 			<posy>0</posy>
 			<width>1280</width>
 			<height>720</height>
-			<texture background="true">$INFO[ListItem.Property(Fanart_Image)]</texture>
+			<texture background="true">$INFO[ListItem.Art(fanart)]</texture>
 			<visible>!Skin.HasSetting(Back_Fanart) + ![Player.HasVideo + !Skin.HasSetting(Back_Video)] + ![Player.HasAudio + !Skin.HasSetting(Back_Vis)]</visible>
 			<fadetime>FanartCrossfadeTime</fadetime>
 			<animation effect="fade" start="0" end="100" time="300" delay="400">WindowOpen</animation>
@@ -31,7 +31,7 @@
 	<include name="RainDropAnimationBackground">
 		<control type="group">
 			<visible>!Skin.HasSetting(HideRainDrops)</visible>
-			<visible>[!Skin.HasSetting(Back_Fanart) + IsEmpty(ListItem.Property(Fanart_Image))] + ![Player.HasVideo + !Skin.HasSetting(Back_Video)] + ![Player.HasAudio + !Skin.HasSetting(Back_Vis)]</visible>
+			<visible>[!Skin.HasSetting(Back_Fanart) + IsEmpty(ListItem.Art(fanart))] + ![Player.HasVideo + !Skin.HasSetting(Back_Video)] + ![Player.HasAudio + !Skin.HasSetting(Back_Vis)]</visible>
 			<include>VisibleFadeEffect</include>
 			<control type="image">
 				<description>Raindrop 5 animation</description>
@@ -117,7 +117,7 @@
 			<width>1280</width>
 			<height>720</height>
 			<texture background="true" fallback="special://skin/backgrounds/weather.png">$INFO[Skin.String(Background_Weather)]</texture>
-			<animation effect="fade" start="100" end="60" time="200" condition="[!IsEmpty(ListItem.Property(Fanart_Image)) + !Skin.HasSetting(Back_Fanart)] | [Player.HasVideo + !Skin.HasSetting(Back_Video)] | [Player.HasAudio + !Skin.HasSetting(Back_Vis)]">Conditional</animation>
+			<animation effect="fade" start="100" end="60" time="200" condition="[!IsEmpty(ListItem.Art(fanart)) + !Skin.HasSetting(Back_Fanart)] | [Player.HasVideo + !Skin.HasSetting(Back_Video)] | [Player.HasAudio + !Skin.HasSetting(Back_Vis)]">Conditional</animation>
 		</control>
 		<include>RainDropAnimationBackground</include>
 	</include>
@@ -129,7 +129,7 @@
 			<width>1280</width>
 			<height>720</height>
 			<texture background="true" fallback="special://skin/backgrounds/apps.png">$INFO[Skin.String(Background_Apps)]</texture>
-			<animation effect="fade" start="100" end="60" time="200" condition="[!IsEmpty(ListItem.Property(Fanart_Image)) + !Skin.HasSetting(Back_Fanart)] | [Player.HasVideo + !Skin.HasSetting(Back_Video)] | [Player.HasAudio + !Skin.HasSetting(Back_Vis)]">Conditional</animation>
+			<animation effect="fade" start="100" end="60" time="200" condition="[!IsEmpty(ListItem.Art(fanart)) + !Skin.HasSetting(Back_Fanart)] | [Player.HasVideo + !Skin.HasSetting(Back_Video)] | [Player.HasAudio + !Skin.HasSetting(Back_Vis)]">Conditional</animation>
 		</control>
 		<include>RainDropAnimationBackground</include>
 	</include>
@@ -141,7 +141,7 @@
 			<width>1280</width>
 			<height>720</height>
 			<texture background="true" fallback="special://skin/backgrounds/media.png">$INFO[Skin.String(Background_Media)]</texture>
-			<animation effect="fade" start="100" end="60" time="200" condition="[!IsEmpty(ListItem.Property(Fanart_Image)) + !Skin.HasSetting(Back_Fanart)] | [Player.HasVideo + !Skin.HasSetting(Back_Video)] | [Player.HasAudio + !Skin.HasSetting(Back_Vis)]">Conditional</animation>
+			<animation effect="fade" start="100" end="60" time="200" condition="[!IsEmpty(ListItem.Art(fanart)) + !Skin.HasSetting(Back_Fanart)] | [Player.HasVideo + !Skin.HasSetting(Back_Video)] | [Player.HasAudio + !Skin.HasSetting(Back_Vis)]">Conditional</animation>
 		</control>
 		<include>RainDropAnimationBackground</include>
 	</include>
@@ -153,7 +153,7 @@
 			<width>1280</width>
 			<height>720</height>
 			<texture background="true" fallback="special://skin/backgrounds/system.png">$INFO[Skin.String(Background_System)]</texture>
-			<animation effect="fade" start="100" end="60" time="200" condition="[!IsEmpty(ListItem.Property(Fanart_Image)) + !Skin.HasSetting(Back_Fanart)] | [Player.HasVideo + !Skin.HasSetting(Back_Video)] | [Player.HasAudio + !Skin.HasSetting(Back_Vis)]">Conditional</animation>
+			<animation effect="fade" start="100" end="60" time="200" condition="[!IsEmpty(ListItem.Art(fanart)) + !Skin.HasSetting(Back_Fanart)] | [Player.HasVideo + !Skin.HasSetting(Back_Video)] | [Player.HasAudio + !Skin.HasSetting(Back_Vis)]">Conditional</animation>
 		</control>
 		<include>RainDropAnimationBackground</include>
 	</include>

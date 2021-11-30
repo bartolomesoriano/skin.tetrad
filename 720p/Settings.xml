@@ -205,6 +205,13 @@
 							<thumb>-</thumb>
 						</item>
 						<item>
+							<label>31008</label>
+							<label2>31411</label2>
+							<onclick>ActivateWindow(PVRSettings)</onclick>
+							<icon>special://skin/button_icons/icon-tv.png</icon>
+							<thumb>-</thumb>
+						</item>
+						<item>
 							<label>1211</label>
 							<label2>31409</label2>
 							<onclick>ActivateWindow(MusicSettings)</onclick>

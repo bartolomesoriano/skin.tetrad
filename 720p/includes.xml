@@ -1,6 +1,7 @@
 <includes>
 	<include file="defaults.xml" />
 	<include file="Views_Common.xml" />
+	<include file="ViewsPVR.xml" />
 	<include file="Common_WindowBuilding.xml" />
 	<include file="IncludesCodecFlagging.xml" />
 
@@ -85,14 +86,15 @@
 	</include>
 	<include name="HeaderTextCommons">
 		<posy>40</posy>
-		<width>800</width>
+		<width>750</width>
+<!--		<width>800</width> -->
 		<height>20</height>
 		<align>left</align>
 		<aligny>center</aligny>
 		<font>font35</font>
 		<textcolor>white</textcolor>
 		<shadowcolor>black</shadowcolor>
-		<visible>!Window.IsVisible(VideoScan) + !Window.IsVisible(MusicScan)</visible>
+		<visible>!Window.IsVisible(extendedprogressdialog)</visible>
 		<include>VisibleFadeEffect</include>
 	</include>
 	<include name="DialogHeaderTextCommons">

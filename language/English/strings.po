@@ -39,8 +39,16 @@ msgctxt "#31006"
 msgid "Media"
 msgstr ""
 
+msgctxt "#31007"
+msgid "live tv"
+msgstr ""
+
+msgctxt "#31008"
+msgid "Live TV"
+msgstr ""
+
 #Main Home Headers
-#empty strings from id 31007 to 31009
+#empty strings from id 31009 to 31009
 
 msgctxt "#31010"
 msgid "Media"
@@ -286,7 +294,7 @@ msgid "Arrange Pictures settings, Including:[CR][CR]* Slideshows[CR]* Thumbnails
 msgstr ""
 
 msgctxt "#31411"
-msgid "Configure PVR Settings, Including:[CR][CR]* Change fullscreen info[CR]* Manage EPG data settings"
+msgid "Configure Live TV Settings, Including:[CR][CR]* Change fullscreen info[CR]* Manage EPG data settings"
 msgstr ""
 
 #empty strings from id 31412 to 31459

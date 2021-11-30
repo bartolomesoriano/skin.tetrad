@@ -76,7 +76,7 @@
 						<posy>110</posy>
 						<width>1050</width>
 						<height>500</height>
-						<texture background="true">$INFO[Listitem.Property(fanart_image)]</texture>
+						<texture background="true">$INFO[ListItem.Art(fanart)]</texture>
 						<aspectratio>keep</aspectratio>
 						<bordertexture border="19,3,19,3">thumb-border.png</bordertexture>
 						<bordersize>18,2,18,2</bordersize>

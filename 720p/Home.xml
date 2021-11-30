@@ -37,7 +37,7 @@
 			</control>
 			<control type="image">
 				<description>Background</description>
-				<posx>105r</posx>
+				<posx>155r</posx>
 				<posy>0</posy>
 				<width>50</width>
 				<height>720</height>
@@ -48,7 +48,7 @@
 				<description>Background</description>
 				<posx>205</posx>
 				<posy>0</posy>
-				<width>970</width>
+				<width>920</width>
 				<height>720</height>
 				<aspectratio>stretch</aspectratio>
 				<texture>background-overlay-blackwash-centertile-ws.png</texture>
@@ -67,7 +67,8 @@
 			</control>
 			<control type="label">
 				<description>Time label</description>
-				<posx>930</posx>
+<!--				<posx>930</posx> -->
+				<posx>880</posx>
 				<include>ClockTextCommons</include>
 			</control>
 			<control type="group">
@@ -405,12 +406,31 @@
 				<width>115</width>
 				<height>800</height>
 				<aspectratio>stretch</aspectratio>
-				<texture>blades-size3-right-NF.png</texture>
+				<texture>blades-size2-right-NF.png</texture>
 			</control>
 			<control type="label">
 				<description>System Label</description>
 				<label>31003</label>
 				<posx>50r</posx>
+				<posy>200</posy>
+				<font>font16</font>
+				<textcolor>black</textcolor>
+				<align>left</align>
+				<aligny>middle</aligny>
+				<angle>270</angle>
+			</control>
+			<control type="image">
+				<posx>165r</posx>
+				<posy>-40</posy>
+				<width>115</width>
+				<height>800</height>
+				<aspectratio>stretch</aspectratio>
+				<texture>blades-size3-right-NF.png</texture>
+			</control>
+			<control type="label">
+				<description>Live TV Label</description>
+				<label>31007</label>
+				<posx>100r</posx>
 				<posy>190</posy>
 				<font>font16</font>
 				<textcolor>black</textcolor>
@@ -418,6 +438,7 @@
 				<aligny>middle</aligny>
 				<angle>270</angle>
 			</control>
+			
 		</control>
 
 		<control type="group">

@@ -103,6 +103,16 @@
 					<align>left</align>
 					<label>13281</label>
 				</control>
+				<control type="button" id="99">
+					<description>Button PVR</description>
+					<height>50</height>
+					<width>200</width>
+					<textcolor>white</textcolor>
+					<texturefocus border="10">button-focus.png</texturefocus>
+					<texturenofocus border="10">button-nofocus.png</texturenofocus>
+					<align>left</align>
+					<label>19191</label>
+				</control>
 			</control>
 			<control type="group">
 				<posx>220</posx>

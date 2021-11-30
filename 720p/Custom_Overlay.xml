@@ -38,6 +38,17 @@
                 <label>AddonBrowser.xml</label>
                 <visible>Window.IsVisible(AddonBrowser.xml)</visible>
             </control>
+			
+			<control type="label">
+                <width>780</width>
+                <height>21</height>
+                <textcolor>FF0000FF</textcolor>
+                <shadowcolor>FF000000</shadowcolor>
+                <font>font13</font>
+                <align>left</align>
+                <label>custom_AppsHome_1111.xml</label>
+                <visible>Window.IsVisible(custom_AppsHome_1111.xml)</visible>
+            </control>
 
             <control type="label">
                 <width>780</width>
@@ -1046,7 +1057,7 @@
 
         <!-- Control label -->
         <control type="label">
-            <right>15</right>
+            <right>45</right>
             <top>15</top>
             <width>780</width>
             <height>42</height>
@@ -1058,7 +1069,7 @@
         </control>
 
         <control type="label">
-            <right>15</right>
+            <right>45</right>
             <posy>80</posy>
             <height>110</height>
             <textcolor>FF00FFFF</textcolor>

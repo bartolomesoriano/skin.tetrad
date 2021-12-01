@@ -114,15 +114,15 @@
 					</focusedlayout>
 					<content>
 						<item>
-							<label>31306</label>
-							<onclick>XBMC.Powerdown()</onclick>
-							<visible>System.CanPowerDown</visible>
-						</item>
-						<item>
 							<label>31307</label>
 							<onclick>XBMC.Quit()</onclick>
 							<visible>System.LoggedOn</visible>
 							<visible>System.ShowExitButton</visible>
+						</item>
+						<item>
+							<label>31306</label>
+							<onclick>XBMC.Powerdown()</onclick>
+							<visible>System.CanPowerDown</visible>
 						</item>
 						<item>
 							<label>13011</label>
@@ -133,6 +133,16 @@
 							<label>13013</label>
 							<onclick>XBMC.Reboot()</onclick>
 							<visible>System.CanReboot</visible>
+						</item>
+						<item>
+							<label>13017</label>
+							<onclick>XBMC.InhibitIdleShutdown(true)</onclick>
+							<visible>System.HasShutdown +!System.IsInhibit</visible>
+						</item>
+						<item>
+							<label>13018</label>
+							<onclick>XBMC.InhibitIdleShutdown(false)</onclick>
+							<visible>System.HasShutdown + System.IsInhibit</visible>
 						</item>
 						<item>
 							<label>20126</label>

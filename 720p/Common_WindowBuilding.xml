@@ -145,6 +145,18 @@
 		</control>
 		<include>RainDropAnimationBackground</include>
 	</include>
+	<include name="CommonLiveTVBackground">
+		<control type="image">
+			<description>Background Live TV</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture background="true" fallback="special://skin/backgrounds/tv.png">$INFO[Skin.String(Background_LiveTV)]</texture>
+			<animation effect="fade" start="100" end="60" time="200" condition="[!IsEmpty(ListItem.Art(fanart)) + !Skin.HasSetting(Back_Fanart)] | [Player.HasVideo + !Skin.HasSetting(Back_Video)] | [Player.HasAudio + !Skin.HasSetting(Back_Vis)]">Conditional</animation>
+		</control>
+		<include>RainDropAnimationBackground</include>
+	</include>
 	<include name="CommonSystemBackground">
 		<control type="image">
 			<description>Background System</description>
@@ -260,6 +272,41 @@
 			<texture>background-overlay-blackwash-centertile-ws.png</texture>
 			<animation effect="zoom" start="205,0,970,720" end="105,0,1120,720" time="HomeBladeAnimationSpeed" condition="Window.Previous(Home)">WindowOpen</animation>
 			<animation effect="zoom" start="105,0,1120,720" end="205,0,970,720" time="HomeBladeAnimationSpeed" condition="Window.Next(Home)">WindowClose</animation>
+		</control>
+	</include>
+	<include name="CommonLiveTVBlackwash">
+		<control type="image">
+			<description>Background</description>
+			<posx>55</posx>
+			<posy>0</posy>
+			<width>50</width>
+			<height>720</height>
+			<aspectratio>stretch</aspectratio>
+			<texture>background-overlay-blackwash-left-ws.png</texture>
+			<animation effect="slide" start="100,0" end="0,0" time="HomeBladeAnimationSpeed" condition="Window.Previous(PVR)">WindowOpen</animation>
+			<animation effect="slide" start="0,0" end="100,0" time="HomeBladeAnimationSpeed" condition="Window.Next(PVR)">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>Background</description>
+			<posx>55r</posx>
+			<posy>0</posy>
+			<width>50</width>
+			<height>720</height>
+			<aspectratio>stretch</aspectratio>
+			<texture>background-overlay-blackwash-right-ws.png</texture>
+			<animation effect="slide" start="-50,0" end="0,0" time="HomeBladeAnimationSpeed" condition="Window.Previous(PVR)">WindowOpen</animation>
+			<animation effect="slide" start="0,0" end="-50,0" time="HomeBladeAnimationSpeed" condition="Window.Next(PVR)">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>Background</description>
+			<posx>105</posx>
+			<posy>0</posy>
+			<width>1120</width>
+			<height>720</height>
+			<aspectratio>stretch</aspectratio>
+			<texture>background-overlay-blackwash-centertile-ws.png</texture>
+			<animation effect="zoom" start="205,0,970,720" end="105,0,1120,720" time="HomeBladeAnimationSpeed" condition="Window.Previous(PVR)">WindowOpen</animation>
+			<animation effect="zoom" start="105,0,1120,720" end="205,0,970,720" time="HomeBladeAnimationSpeed" condition="Window.Next(PVR)">WindowClose</animation>
 		</control>
 	</include>
 	<include name="CommonSystemBlackwash">

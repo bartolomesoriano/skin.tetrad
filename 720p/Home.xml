@@ -26,6 +26,7 @@
 		<control type="group">
 			<animation effect="slide" end="-50,0" time="0" condition="Control.HasFocus(1)">Conditional</animation>
 			<animation effect="slide" end="50,0" time="0" condition="Control.HasFocus(2)">Conditional</animation>
+			<animation effect="slide" end="50,0" time="0" condition="Control.HasFocus(3)">Conditional</animation>
 			<control type="image">
 				<description>Background</description>
 				<posx>155</posx>
@@ -55,9 +56,10 @@
 			</control>
 		</control>
 <!-- Blackwash Background End-->
+		<!-- Media Tab -->
 		<control type="group">
 			<posx>230</posx>
-			<visible>!Control.HasFocus(1) + !Control.HasFocus(2)</visible>
+			<visible>!Control.HasFocus(1) + !Control.HasFocus(3) + !Control.HasFocus(2)</visible>
 			<animation effect="fade" time="HomeVisibleFadeAnimationSpeed">WindowOpen</animation>
 			<control type="label">
 				<description>Header label</description>
@@ -147,7 +149,7 @@
 					<width>450</width>
 					<height>314</height>
 					<onleft>1</onleft>
-					<onright>2</onright>
+					<onright>3</onright>
 					<onup>15</onup>
 					<ondown>15</ondown>
 					<viewtype label="535">list</viewtype>
@@ -312,6 +314,17 @@
 			<animation effect="slide" end="1280,0" time="HomeBladeAnimationSpeed">focus</animation>
 			<hitrect x="-10" y="-10" w="1" h="1" />
 		</control>
+		<control type="button" id="3">
+			<description>Blank Blade Slide Left</description>
+			<posx>80r</posx>
+			<posy>0</posy>
+			<width>160</width>
+			<height>720</height>
+			<texturefocus>blades-blank-right.png</texturefocus>
+			<onfocus>ActivateWindow(PVR)</onfocus>
+			<animation effect="slide" end="-1280,0" time="HomeBladeAnimationSpeed">focus</animation>
+			<hitrect x="-10" y="-10" w="1" h="1" />
+		</control>
 		<control type="button" id="2">
 			<description>Blank Blade Slide Left</description>
 			<posx>80r</posx>
@@ -323,8 +336,9 @@
 			<animation effect="slide" end="-1280,0" time="HomeBladeAnimationSpeed">focus</animation>
 			<hitrect x="-10" y="-10" w="1" h="1" />
 		</control>
+		
 		<control type="group">
-			<visible>!Control.HasFocus(1) + !Control.HasFocus(2)</visible>
+			<visible>!Control.HasFocus(1) + !Control.HasFocus(3) + !Control.HasFocus(2)</visible>
 			<!-- Left side -->
 			<control type="image">
 				<posx>-110</posx>
@@ -400,6 +414,7 @@
 				<aspectratio>stretch</aspectratio>
 				<texture>blades-runner-right.png</texture>
 			</control>
+			<!-- System blade -->
 			<control type="image">
 				<posx>115r</posx>
 				<posy>-40</posy>
@@ -419,6 +434,7 @@
 				<aligny>middle</aligny>
 				<angle>270</angle>
 			</control>
+			<!-- Live TV blade -->
 			<control type="image">
 				<posx>165r</posx>
 				<posy>-40</posy>

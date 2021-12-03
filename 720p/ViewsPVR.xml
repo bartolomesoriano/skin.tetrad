@@ -4,102 +4,25 @@
 			<description>TV Channels group</description>
 			<visible>Control.IsVisible(11)</visible>
 			<include>VisibleFadeEffect</include>
-			<control type="group">
-				<posx>530</posx>
-				<posy>490</posy>
-				<control type="label">
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>690</width>
-					<height>20</height>
-					<font>font13</font>
-					<textcolor>white</textcolor>
-					<shadowcolor>black</shadowcolor>
-					<scroll>true</scroll>
-					<align>center</align>
-					<aligny>center</aligny>
-					<label>[B]$INFO[Container(11).ListItem.Title][/B]</label>
-				</control>
-				<control type="label">
-					<posx>80</posx>
-					<posy>22</posy>
-					<width>80</width>
-					<height>20</height>
-					<align>right</align>
-					<aligny>center</aligny>
-					<font>font10_title</font>
-					<textcolor>blue</textcolor>
-					<visible>Container(11).ListItem.HasEpg</visible>
-					<label>$INFO[Container(11).ListItem.StartTime]</label>
-				</control>
-				<control type="progress">
-					<description>Progressbar</description>
-					<posx>85</posx>
-					<posy>30</posy>
-					<width>510</width>
-					<height>8</height>
-					<visible>Container(11).ListItem.HasEpg</visible>
-					<info>Container(11).ListItem.Progress</info>
-				</control>
-				<control type="label">
-					<posx>600</posx>
-					<posy>22</posy>
-					<width>80</width>
-					<height>20</height>
-					<align>left</align>
-					<aligny>center</aligny>
-					<font>font10_title</font>
-					<textcolor>blue</textcolor>
-					<visible>Container(11).ListItem.HasEpg</visible>
-					<label>$INFO[Container(11).ListItem.EndTime]</label>
-				</control>
-				<control type="textbox">
-					<description>Plot Value for TVShow</description>
-					<posx>0</posx>
-					<posy>43</posy>
-					<width>690</width>
-					<height>80</height>
-					<font>font12</font>
-					<align>justify</align>
-					<textcolor>white</textcolor>
-					<shadowcolor>black</shadowcolor>
-					<pagecontrol>-</pagecontrol>
-					<label>$INFO[Container(11).ListItem.Plot]</label>
-					<autoscroll time="2000" delay="3000" repeat="5000">true</autoscroll>
-				</control>
-				<control type="label">
-					<posx>690</posx>
-					<posy>140</posy>
-					<width>690</width>
-					<height>20</height>
-					<font>font12</font>
-					<textcolor>grey2</textcolor>
-					<align>right</align>
-					<aligny>center</aligny>
-					<scroll>false</scroll>
-					<visible>!IsEmpty(Container(11).ListItem.NextTitle)</visible>
-					<label>$LOCALIZE[19031]: $INFO[Container(11).ListItem.NextTitle]</label>
-				</control>
-			</control>
 			<control type="list" id="11">
-				<posx>70</posx>
-				<posy>85</posy>
-				<width>390</width>
-				<height>541</height>
+				<posx>0</posx>
+				<posy>5</posy>
+				<width>450</width>
+				<height>540</height>
 				<onleft>32</onleft>
-				<onright>70</onright>
+				<onright>60</onright>
 				<onup>11</onup>
 				<ondown>11</ondown>
 				<viewtype label="535">list</viewtype>
-				<pagecontrol>70</pagecontrol>
+				<pagecontrol>60</pagecontrol>
 				<scrolltime>200</scrolltime>
-				<itemlayout height="60" width="390">
+				<itemlayout height="60" width="450">
 					<control type="image">
 						<posx>0</posx>
 						<posy>0</posy>
-						<width>390</width>
+						<width>450</width>
 						<height>61</height>
-						<texture border="2">MenuItemNF.png</texture>
+						<texture border="10">list-nofocus.png</texture>
 						<include>VisibleFadeEffect</include>
 					</control>
 					<control type="label">
@@ -117,11 +40,10 @@
 					<control type="label">
 						<posx>50</posx>
 						<posy>0</posy>
-						<width>270</width>
+						<width>310</width>
 						<height>25</height>
 						<font>font13</font>
 						<textcolor>white</textcolor>
-						<selectedcolor>selected</selectedcolor>
 						<align>left</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label]</label>
@@ -129,7 +51,7 @@
 					<control type="label">
 						<posx>50</posx>
 						<posy>25</posy>
-						<width>330</width>
+						<width>370</width>
 						<height>20</height>
 						<font>font12</font>
 						<textcolor>grey</textcolor>
@@ -142,7 +64,7 @@
 					<control type="label">
 						<posx>50</posx>
 						<posy>25</posy>
-						<width>280</width>
+						<width>320</width>
 						<height>20</height>
 						<font>font12</font>
 						<textcolor>grey</textcolor>
@@ -156,14 +78,14 @@
 						<description>Progressbar</description>
 						<posx>50</posx>
 						<posy>48</posy>
-						<width>280</width>
+						<width>320</width>
 						<height>6</height>
 						<colordiffuse>88FFFFFF</colordiffuse>
 						<visible>ListItem.HasEpg</visible>
 						<info>ListItem.Progress</info>
 					</control>
 					<control type="image">
-						<posx>340</posx>
+						<posx>390</posx>
 						<posy>4</posy>
 						<width>50</width>
 						<height>50</height>
@@ -178,24 +100,24 @@
 						<visible>ListItem.IsRecording</visible>
 					</control>
 				</itemlayout>
-				<focusedlayout height="60" width="390">
+				<focusedlayout height="60" width="450">
 					<control type="image">
 						<posx>0</posx>
 						<posy>0</posy>
-						<width>390</width>
+						<width>450</width>
 						<height>61</height>
-						<texture border="2">MenuItemNF.png</texture>
-						<visible>!Control.HasFocus(11)</visible>
+						<texture border="10">list-focus.png</texture>
 						<include>VisibleFadeEffect</include>
+						<visible>Control.HasFocus(11)</visible>
 					</control>
 					<control type="image">
 						<posx>0</posx>
 						<posy>0</posy>
-						<width>390</width>
+						<width>450</width>
 						<height>61</height>
-						<texture border="2">MenuItemFO.png</texture>
-						<visible>Control.HasFocus(11)</visible>
+						<texture border="10">list-nofocus.png</texture>
 						<include>VisibleFadeEffect</include>
+						<visible>!Control.HasFocus(11)</visible>
 					</control>
 					<control type="label">
 						<posx>5</posx>
@@ -205,18 +127,18 @@
 						<font>font12</font>
 						<align>left</align>
 						<aligny>center</aligny>
-						<textcolor>grey</textcolor>
-						<selectedcolor>grey</selectedcolor>
+						<textcolor>black</textcolor>
+					    <selectedcolor>orange</selectedcolor>
 						<info>ListItem.ChannelNumber</info>
 					</control>
 					<control type="label">
 						<posx>50</posx>
 						<posy>0</posy>
-						<width>270</width>
+						<width>310</width>
 						<height>25</height>
 						<font>font13</font>
-						<textcolor>white</textcolor>
-						<selectedcolor>selected</selectedcolor>
+						<textcolor>black</textcolor>
+					    <selectedcolor>orange</selectedcolor>
 						<align>left</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label]</label>
@@ -224,11 +146,11 @@
 					<control type="label">
 						<posx>50</posx>
 						<posy>25</posy>
-						<width>330</width>
+						<width>370</width>
 						<height>20</height>
 						<font>font12</font>
-						<textcolor>grey</textcolor>
-						<selectedcolor>grey</selectedcolor>
+						<textcolor>black</textcolor>
+					    <selectedcolor>orange</selectedcolor>
 						<align>left</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Title]</label>
@@ -237,11 +159,11 @@
 					<control type="label">
 						<posx>50</posx>
 						<posy>25</posy>
-						<width>280</width>
+						<width>320</width>
 						<height>20</height>
 						<font>font12</font>
-						<textcolor>grey</textcolor>
-						<selectedcolor>grey</selectedcolor>
+						<textcolor>black</textcolor>
+					    <selectedcolor>orange</selectedcolor>
 						<align>left</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Title]</label>
@@ -251,14 +173,14 @@
 						<description>Progressbar</description>
 						<posx>50</posx>
 						<posy>48</posy>
-						<width>280</width>
+						<width>320</width>
 						<height>6</height>
 						<colordiffuse>88FFFFFF</colordiffuse>
 						<visible>ListItem.HasEpg</visible>
 						<info>ListItem.Progress</info>
 					</control>
 					<control type="image">
-						<posx>340</posx>
+						<posx>390</posx>
 						<posy>4</posy>
 						<width>50</width>
 						<height>50</height>
@@ -274,11 +196,11 @@
 					</control>
 				</focusedlayout>
 			</control>
-			<control type="scrollbar" id="70">
+<!--			<control type="scrollbar" id="70">
 				<posx>465</posx>
-				<posy>85</posy>
+				<posy>-5</posy>
 				<width>25</width>
-				<height>540</height>
+				<height>492</height>
 				<texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
 				<texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
 				<texturesliderbarfocus border="0,14,0,14">ScrollBarV_bar_focus.png</texturesliderbarfocus>
@@ -288,7 +210,7 @@
 				<onright>32</onright>
 				<showonepage>false</showonepage>
 				<orientation>vertical</orientation>
-			</control>
+			</control> -->
 			<control type="label">
 				<animation effect="slide" start="0,0" end="-90,0" time="0" condition="system.getbool(input.enablemouse)">Conditional</animation>
 				<description>Page Count Label</description>

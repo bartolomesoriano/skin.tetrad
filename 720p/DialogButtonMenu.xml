@@ -120,6 +120,10 @@
 							<visible>System.ShowExitButton</visible>
 						</item>
 						<item>
+							<label>Settings</label>
+							<onclick>ActivateWindow(Settings)</onclick>
+						</item>
+						<item>
 							<label>31306</label>
 							<onclick>XBMC.Powerdown()</onclick>
 							<visible>System.CanPowerDown</visible>

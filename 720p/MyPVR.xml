@@ -11,6 +11,139 @@
 			<include>CommonLiveTVBlackwash</include>
 		</control>
 		<control type="group">
+			<description>Small Media Window</description>
+			<posx>610</posx>
+			<posy>80</posy>
+			<visible>Control.IsVisible(11) | Control.IsVisible(12)</visible>
+			<include>VisibleFadeEffect</include>
+			<include>Window_OpenClose_Animation</include>		
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>597</width>
+				<height>340</height>
+				<texture border="5">button-nofocus.png</texture>
+			</control>
+			<control type="image">
+				<posx>5</posx>
+				<posy>5</posy>
+				<width>587</width>
+				<height>330</height>
+				<texture fallback="special://skin/backgrounds/tv.jpg">$INFO[Skin.String(Home_Custom_Back_TV_Folder)]</texture>
+				<include>VisibleFadeEffect</include>
+				<visible>!Player.HasVideo</visible>
+			</control>
+			<control type="videowindow">
+				<posx>5</posx>
+				<posy>5</posy>
+				<width>587</width>
+				<height>330</height>
+				<visible>Player.HasVideo</visible>
+				<animation effect="slide" start="0,0" end="-2000,0" time="0">WindowClose</animation>
+			</control>
+			<control type="image">
+				<posx>1</posx>
+				<posy>1</posy>
+				<width>595</width>
+				<height>35</height>
+				<texture>black-back.png</texture>
+				<colordiffuse>DDFFFFFF</colordiffuse>
+				<visible>Player.HasVideo</visible>
+			</control>
+			<control type="label">
+				<description>Current Video label</description>
+				<posx>1</posx>
+				<posy>1</posy>
+				<width>595</width>
+				<height>35</height>
+				<font>font12</font>
+				<textcolor>grey2</textcolor>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>$INFO[VideoPlayer.Title]</label>
+				<visible>Player.HasVideo</visible>
+			</control>
+		</control>
+		<control type="group">
+			<visible>Control.IsVisible(11)</visible>
+			<posx>600</posx>
+			<posy>430</posy>
+			<control type="label">
+				<posx>10</posx>
+				<posy>0</posy>
+				<width>620</width>
+				<height>20</height>
+				<font>font13</font>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<scroll>true</scroll>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>[B]$INFO[Container(11).ListItem.Title][/B]</label>
+			</control>
+			<control type="label">
+				<posx>75</posx>
+				<posy>22</posy>
+				<width>80</width>
+				<height>20</height>
+				<align>right</align>
+				<aligny>center</aligny>
+				<font>font10</font>
+				<textcolor>blue</textcolor>
+				<visible>Container(11).ListItem.HasEpg</visible>
+				<label>[B]$INFO[Container(11).ListItem.StartTime][/B]</label>
+			</control>
+			<control type="progress">
+				<description>Progressbar</description>
+				<posx>80</posx>
+				<posy>30</posy>
+				<width>460</width>
+				<height>8</height>
+				<visible>Container(11).ListItem.HasEpg</visible>
+				<info>Container(11).ListItem.Progress</info>
+			</control>
+			<control type="label">
+				<posx>545</posx>
+				<posy>22</posy>
+				<width>80</width>
+				<height>20</height>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>font10</font>
+				<textcolor>blue</textcolor>
+				<visible>Container(11).ListItem.HasEpg</visible>
+				<label>[B]$INFO[Container(11).ListItem.EndTime][/B]</label>
+			</control>
+			<control type="textbox">
+				<description>Plot Value for TVShow</description>
+				<posx>0</posx>
+				<posy>43</posy>
+				<width>620</width>
+				<height>90</height>
+				<font>font12</font>
+				<align>justify</align>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<pagecontrol>-</pagecontrol>
+				<label>$INFO[Container(11).ListItem.Plot]</label>
+				<autoscroll time="2000" delay="3000" repeat="5000">true</autoscroll>
+			</control>
+			<control type="label">
+				<animation effect="slide" start="0,0" end="-160,0" time="200" condition="Player.HasVideo">Conditional</animation>
+				<posx>620</posx>
+				<posy>140</posy>
+				<width>620</width>
+				<height>20</height>
+				<font>font12</font>
+				<textcolor>grey2</textcolor>
+				<align>right</align>
+				<aligny>center</aligny>
+				<scroll>false</scroll>
+				<visible>!IsEmpty(Container(11).ListItem.NextTitle)</visible>
+				<label>$LOCALIZE[19031]: $INFO[Container(11).ListItem.NextTitle]</label>
+			</control>
+		</control>
+		<control type="group">
 			<posx>130</posx>
 			<animation effect="fade" delay="500" time="HomeVisibleFadeAnimationSpeed">WindowOpen</animation>
 			<animation effect="fade" start="0" end="0" time="0">WindowClose</animation>
@@ -20,9 +153,9 @@
 				<label>$LOCALIZE[31008]</label>
 				<include>HeaderTextCommons</include>
 			</control>
-			<control type="group">
+			<control type="group" id="50">
 				<posx>0</posx>
-				<posy>110</posy>
+				<posy>80</posy>
 				<include>EPGTimelineView</include> <!-- view id = 10 -->
 			    <include>LiveTVChannelView</include> <!-- view id = 11 -->
 			    <include>LiveRadioChannelView</include> <!-- view id = 12 -->
@@ -159,7 +292,7 @@
 		</control>
 		<include>AllViewCommonPageControls</include>
 		<control type="group">
-			<include>MediaToSubBlades</include>
+			<include>LiveTVToSubBlades</include>
 		</control>
 		<include>Common_Now_Playing</include>
 	</controls>

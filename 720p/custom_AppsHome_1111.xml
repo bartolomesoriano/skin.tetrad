@@ -22,6 +22,18 @@
 			<include>CommonWeatherBackground</include>
 		</control>
 		<include condition="Skin.HasSetting(DontBlendBackground)">CommonVideoVizBackground</include>
+		<control type="label">
+			<description>date label</description>
+			<posx>855</posx>
+			<posy>6</posy>
+			<width>380</width>
+			<height>30</height>
+			<align>center</align>
+			<aligny>center</aligny>
+			<font>font12</font>
+			<textcolor>white</textcolor>
+			<label>$INFO[System.Date]</label>
+		</control>
 <!-- Blackwash Background -->
 		<control type="group">
 			<animation effect="slide" end="-50,0" time="0" condition="Control.HasFocus(1)">Conditional</animation>
@@ -76,43 +88,31 @@
 				<include>SystemCard</include>
 			</control>
 			<control type="group">
-				<posx>510</posx>
-				<posy>100</posy>
-				<control type="label">
-					<description>date label</description>
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>380</width>
-					<height>30</height>
-					<align>center</align>
-					<aligny>center</aligny>
-					<font>font12</font>
-					<textcolor>white2</textcolor>
-					<label>$INFO[System.Date]</label>
-				</control>
+				<posx>580</posx>
+				<posy>106</posy>
 				<control type="image">
 					<description>Logo</description>
-					<posx>0</posx>
-					<posy>30</posy>
-					<width>380</width>
-					<height>70</height>
+					<posx>50</posx>
+					<posy>0</posy>
+					<width>150</width>
+					<height>101</height>
 					<aspectratio>keep</aspectratio>
-					<texture>xbmc_logo.png</texture>
+					<texture>tetradui_logo.png</texture>
 				</control>
 				<control type="image">
 					<description>Logo Mirror</description>
-					<posx>0</posx>
-					<posy>90</posy>
-					<width>380</width>
-					<height>70</height>
+					<posx>50</posx>
+					<posy>95</posy>
+					<width>150</width>
+					<height>101</height>
 					<aspectratio>keep</aspectratio>
-					<texture diffuse="diffuse_mirror2.png" flipy="true">xbmc_logo.png</texture>
+					<texture diffuse="diffuse_mirror2.png" flipy="true">tetradui_logo.png</texture>
 				</control>
 				<control type="image">
 					<description>Logo Shadow</description>
-					<posx>0</posx>
-					<posy>100</posy>
-					<width>380</width>
+					<posx>25</posx>
+					<posy>108</posy>
+					<width>200</width>
 					<height>16</height>
 					<texture>home_logoshadow.png</texture>
 				</control>

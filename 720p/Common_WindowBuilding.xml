@@ -157,6 +157,18 @@
 		</control>
 		<include>RainDropAnimationBackground</include>
 	</include>
+	<include name="CommonGamesBackground">
+		<control type="image">
+			<description>Background Games</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture background="true" fallback="special://skin/backgrounds/apps.png">$INFO[Skin.String(Background_Games)]</texture>
+			<animation effect="fade" start="100" end="60" time="200" condition="[!IsEmpty(ListItem.Art(fanart)) + !Skin.HasSetting(Back_Fanart)] | [Player.HasVideo + !Skin.HasSetting(Back_Video)] | [Player.HasAudio + !Skin.HasSetting(Back_Vis)]">Conditional</animation>
+		</control>
+		<include>RainDropAnimationBackground</include>
+	</include>
 	<include name="CommonSystemBackground">
 		<control type="image">
 			<description>Background System</description>

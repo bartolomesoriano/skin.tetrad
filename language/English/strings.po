@@ -47,8 +47,11 @@ msgctxt "#31008"
 msgid "Live TV"
 msgstr ""
 
+msgctxt "#31009"
+msgid "games"
+msgstr ""
+
 #Main Home Headers
-#empty strings from id 31009 to 31009
 
 msgctxt "#31010"
 msgid "Media"
@@ -70,8 +73,12 @@ msgctxt "#31014"
 msgid "Video Bookmarks"
 msgstr ""
 
+msgctxt "#31015"
+msgid "Games"
+msgstr ""
+
 #Extra Main Home Labels
-#empty strings from id 31015 to 31019
+#empty strings from id 31016 to 31019
 
 msgctxt "#31020"
 msgid "Weather Conditions"

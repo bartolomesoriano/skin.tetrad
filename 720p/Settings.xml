@@ -47,6 +47,10 @@
 				<aspectratio>stretch</aspectratio>
 				<texture>background-overlay-blackwash-centertile-ws.png</texture>
 			</control>
+			<control type="group">
+		        <posx>1120</posx>
+			    <include>ClockTextCommons</include>
+			</control>
 		</control>
 <!-- Blackwash Background End-->
 		<control type="group">
@@ -59,11 +63,7 @@
 				<label>31012</label>
 				<include>HeaderTextCommons</include>
 			</control>
-			<control type="label">
-				<description>Time label</description>
-				<posx>930</posx>
-				<include>ClockTextCommons</include>
-			</control>
+			
 			<control type="group">
 				<posy>130</posy>
 				<control type="image">
@@ -375,8 +375,8 @@
 				<texture>blades-size1-left-NF.png</texture>
 			</control>
 			<control type="label">
-				<description>weather Label</description>
-				<label>31004</label>
+				<description>Applications Label</description>
+				<label>31002</label>
 				<posx>90</posx>
 				<posy>210</posy>
 				<font>font16</font>
@@ -394,8 +394,8 @@
 				<texture>blades-size2-left-NF.png</texture>
 			</control>
 			<control type="label">
-				<description>Apps Label</description>
-				<label>31002</label>
+				<description>Games Label</description>
+				<label>31009</label>
 				<posx>140</posx>
 				<posy>200</posy>
 				<font>font16</font>
@@ -473,8 +473,8 @@
 				<texture>blades-size2-left-NF.png</texture>
 			</control>
 			<control type="label">
-				<description>weather Label</description>
-				<label>31004</label>
+				<description>Applications Label</description>
+				<label>31002</label>
 				<posx>90</posx>
 				<posy>200</posy>
 				<font>font16</font>
@@ -492,8 +492,8 @@
 				<texture>blades-size3-left-NF.png</texture>
 			</control>
 			<control type="label">
-				<description>Applications Label</description>
-				<label>31002</label>
+				<description>Games Label</description>
+				<label>31009</label>
 				<posx>140</posx>
 				<posy>190</posy>
 				<font>font16</font>

@@ -107,19 +107,63 @@
 		<textcolor>white</textcolor>
 		<shadowcolor>black</shadowcolor>
 	</include>
+	
 	<include name="ClockTextCommons">
-		<posy>40</posy>
-		<width>380</width>
-		<height>20</height>
-		<align>right</align>
-		<aligny>center</aligny>
-		<font>font16</font>
-		<textcolor>white</textcolor>
-		<shadowcolor>black</shadowcolor>
-		<label>$INFO[System.Time]</label>
-		<visible>!Window.IsVisible(Seekbar)</visible>
-		<include>VisibleFadeEffect</include>
+		<control type="label">
+		    <description>date label</description>
+		    <posy>0</posy>
+	        <width>380</width>
+		    <height>30</height>
+		    <align>right</align>
+		    <aligny>center</aligny>
+		    <font>font12</font>
+		    <textcolor>white2</textcolor>
+		    <label>$INFO[System.Date]</label>
+	    </control>
+		<control type="label">
+		    <posy>40</posy>
+	        <width>380</width>
+	        <height>20</height>
+	        <align>right</align>
+	        <aligny>center</aligny>
+	        <font>font16</font>
+	        <textcolor>white</textcolor>
+	        <shadowcolor>black</shadowcolor>
+	        <label>$INFO[System.Time]</label>
+	        <visible>!Window.IsVisible(Seekbar)</visible>
+	        <include>VisibleFadeEffect</include>
+	    </control>
 	</include>
+	
+	<include name="TetradLogoCommons">
+	    <control type="image">
+			<description>Logo</description>
+			<posx>50</posx>
+			<posy>0</posy>
+			<width>150</width>
+			<height>101</height>
+			<aspectratio>keep</aspectratio>
+			<texture>tetradui_logo.png</texture>
+		</control>
+		<control type="image">
+			<description>Logo Mirror</description>
+			<posx>50</posx>
+			<posy>95</posy>
+			<width>150</width>
+			<height>101</height>
+			<aspectratio>keep</aspectratio>
+			<texture diffuse="diffuse_mirror2.png" flipy="true">tetradui_logo.png</texture>
+		</control>
+		<control type="image">
+			<description>Logo Shadow</description>
+			<posx>25</posx>
+			<posy>108</posy>
+			<width>200</width>
+			<height>16</height>
+			<texture>home_logoshadow.png</texture>
+		</control>
+	</include>
+	
 	<include name="ButtonCommonValues">
 		<height>40</height>
 		<width>210</width>

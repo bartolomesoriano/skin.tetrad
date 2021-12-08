@@ -6,23 +6,26 @@
 	<animation effect="fade" start="100" end="100" time="30" condition="Control.HasFocus(2)">WindowClose</animation>
 	<controls>
 		<include condition="!Skin.HasSetting(DontBlendBackground)">CommonVideoVizBackground</include>
+		<!-- If none of the navigation buttons are focused, show the Media background -->
 		<control type="group">
 			<animation effect="slide" start="0,0" end="-1280,0" time="HomeBladeAnimationSpeed" condition="Control.HasFocus(2)">Conditional</animation>
 			<animation effect="slide" start="0,0" end="1280,0" time="HomeBladeAnimationSpeed" condition="Control.HasFocus(1)">Conditional</animation>
 			<include>CommonMediaBackground</include>
 		</control>
+		<!-- If the button to go right is focused, show the System Background -->
 		<control type="group">
 			<visible>Control.HasFocus(2)</visible>
 			<animation effect="slide" start="1280,0" end="0,0" time="HomeBladeAnimationSpeed" condition="Control.HasFocus(2)">Conditional</animation>
 			<include>CommonSystemBackground</include>
 		</control>
+		<!-- If the button to go left is focused, show the Games Background -->
 		<control type="group">
 			<visible>Control.HasFocus(1)</visible>
 			<animation effect="slide" start="-1280,0" end="0,0" time="HomeBladeAnimationSpeed" condition="Control.HasFocus(1)">Conditional</animation>
 			<include>CommonGamesBackground</include>
 		</control>
 		<include condition="Skin.HasSetting(DontBlendBackground)">CommonVideoVizBackground</include>
-<!-- Blackwash Background -->
+        <!-- Center Background -->
 		<control type="group">
 			<animation effect="slide" end="-50,0" time="0" condition="Control.HasFocus(1)">Conditional</animation>
 			<animation effect="slide" end="50,0" time="0" condition="Control.HasFocus(2)">Conditional</animation>
@@ -53,12 +56,13 @@
 				<aspectratio>stretch</aspectratio>
 				<texture>background-overlay-blackwash-centertile-ws.png</texture>
 			</control>
+			<!-- Date and time -->
+			<!-- To do: convert this into an include with PARAMS -->
 			<control type="group">
 		        <posx>1070</posx>
 			    <include>ClockTextCommons</include>
 			</control>
 		</control>
-<!-- Blackwash Background End-->
 		<!-- Media Tab -->
 		<control type="group">
 			<posx>230</posx>
@@ -110,7 +114,7 @@
 					<height>314</height>
 					<onleft>1</onleft>
 					<onright>2</onright>
-					<onup>15</onup>
+					<onup>9015</onup>
 					<ondown>15</ondown>
 					<viewtype label="535">list</viewtype>
 					<pagecontrol>60</pagecontrol>

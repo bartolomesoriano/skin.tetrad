@@ -321,6 +321,41 @@
 			<animation effect="zoom" start="105,0,1120,720" end="205,0,970,720" time="HomeBladeAnimationSpeed" condition="Window.Next(PVR)">WindowClose</animation>
 		</control>
 	</include>
+	<include name="CommonWeatherBlackwash">
+		<control type="image">
+			<description>Background</description>
+			<posx>55</posx>
+			<posy>0</posy>
+			<width>50</width>
+			<height>720</height>
+			<aspectratio>stretch</aspectratio>
+			<texture>background-overlay-blackwash-left-ws.png</texture>
+			<animation effect="slide" start="100,0" end="0,0" time="HomeBladeAnimationSpeed" condition="Window.Previous(weather)">WindowOpen</animation>
+			<animation effect="slide" start="0,0" end="100,0" time="HomeBladeAnimationSpeed" condition="Window.Next(weather)">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>Background</description>
+			<posx>55r</posx>
+			<posy>0</posy>
+			<width>50</width>
+			<height>720</height>
+			<aspectratio>stretch</aspectratio>
+			<texture>background-overlay-blackwash-right-ws.png</texture>
+			<animation effect="slide" start="-50,0" end="0,0" time="HomeBladeAnimationSpeed" condition="Window.Previous(weather)">WindowOpen</animation>
+			<animation effect="slide" start="0,0" end="-50,0" time="HomeBladeAnimationSpeed" condition="Window.Next(weather)">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>Background</description>
+			<posx>105</posx>
+			<posy>0</posy>
+			<width>1120</width>
+			<height>720</height>
+			<aspectratio>stretch</aspectratio>
+			<texture>background-overlay-blackwash-centertile-ws.png</texture>
+			<animation effect="zoom" start="205,0,970,720" end="105,0,1120,720" time="HomeBladeAnimationSpeed" condition="Window.Previous(weather)">WindowOpen</animation>
+			<animation effect="zoom" start="105,0,1120,720" end="205,0,970,720" time="HomeBladeAnimationSpeed" condition="Window.Next(weather)">WindowClose</animation>
+		</control>
+	</include>
 	<include name="CommonSystemBlackwash">
 		<control type="image">
 			<description>Background</description>
@@ -386,7 +421,7 @@
 			<angle>270</angle>
 		</control>
 		<!-- Right side -->
-		<control type="image">
+<!--		<control type="image">
 			<posx>55r</posx>
 			<posy>-40</posy>
 			<width>180</width>
@@ -507,7 +542,7 @@
 			<aspectratio>stretch</aspectratio>
 			<texture>blades-runner-right.png</texture>
 			<animation effect="fade" start="100" end="0" time="100" delay="HomeBladeAnimationSpeed" condition="Window.Next(Weather)">WindowClose</animation>
-		</control>
+		</control> -->
 	</include>
 
 	<include name="AppsToSubBlades">
@@ -537,8 +572,8 @@
 			</animation>
 		</control>
 		<control type="label">
-			<description>weather Label</description>
-			<label>31004</label>
+			<description>apps Label</description>
+			<label>31002</label>
 			<posx>40</posx>
 			<posy>190</posy>
 			<font>font16</font>
@@ -580,7 +615,7 @@
 				<effect type="slide" start="0,0" end="-10,0" delay="100" time="HomeBladeAnimationSpeed" />
 			</animation>
 		</control>
-		<control type="label">
+<!--		<control type="label">
 			<description>Applications Label</description>
 			<label>31002</label>
 			<posx>90</posx>
@@ -598,7 +633,7 @@
 				<effect type="slide" start="0,0" end="60,0" time="100" />
 				<effect type="slide" start="0,0" end="-10,0" delay="100" time="HomeBladeAnimationSpeed" />
 			</animation>
-		</control>
+		</control> -->
 		<!-- Right side -->
 		<control type="image">
 			<posx>55r</posx>
@@ -687,6 +722,34 @@
 			<texture>blades-runner-right.png</texture>
 			<animation effect="fade" start="100" end="0" time="100" delay="HomeBladeAnimationSpeed" condition="Window.Next(1111)">WindowClose</animation>
 		</control>
+		<control type="label">
+			<description>Games Label</description>
+			<label>31009</label>
+			<posx>0r</posx>
+			<posy>190</posy>
+			<font>font16</font>
+			<textcolor>black</textcolor>
+			<align>left</align>
+			<aligny>middle</aligny>
+			<angle>270</angle>
+			<animation type="WindowOpen" condition="Window.Previous(1111)">
+				<effect type="slide" start="-150,0" end="-160,0" time="100" />
+				<effect type="slide" start="0,0" end="160,0" delay="100" time="HomeBladeAnimationSpeed" />
+			</animation>
+			<animation type="WindowClose" condition="Window.Next(1111)">
+				<effect type="slide" start="0,0" end="-160,0" time="100" />
+				<effect type="slide" start="0,0" end="10,0" delay="100" time="HomeBladeAnimationSpeed" />
+			</animation>
+		</control>
+		<control type="image">
+			<posx>55r</posx>
+			<posy>-40</posy>
+			<width>180</width>
+			<height>800</height>
+			<aspectratio>stretch</aspectratio>
+			<texture>blades-runner-right.png</texture>
+			<animation effect="fade" start="100" end="0" time="100" delay="HomeBladeAnimationSpeed" condition="Window.Next(1111)">WindowClose</animation>
+		</control>
 	</include>
 
 	<include name="MediaToSubBlades">
@@ -716,8 +779,8 @@
 			</animation>
 		</control>
 		<control type="label">
-			<description>weather Label</description>
-			<label>31004</label>
+			<description>apps Label</description>
+			<label>31002</label>
 			<posx>-10</posx>
 			<posy>200</posy>
 			<font>font16</font>
@@ -751,8 +814,8 @@
 			</animation>
 		</control>
 		<control type="label">
-			<description>Applications Label</description>
-			<label>31002</label>
+			<description>games Label</description>
+			<label>31009</label>
 			<posx>40</posx>
 			<posy>190</posy>
 			<font>font16</font>
@@ -896,8 +959,8 @@
 			</animation>
 		</control>
 		<control type="label">
-			<description>weather Label</description>
-			<label>31004</label>
+			<description>apps Label</description>
+			<label>31002</label>
 			<posx>-60</posx>
 			<posy>210</posy>
 			<font>font16</font>
@@ -931,8 +994,8 @@
 			</animation>
 		</control>
 		<control type="label">
-			<description>Apps Label</description>
-			<label>31002</label>
+			<description>Games Label</description>
+			<label>31009</label>
 			<posx>-10</posx>
 			<posy>200</posy>
 			<font>font16</font>
@@ -1248,5 +1311,5 @@
 			<animation effect="fade" start="100" end="0" time="100" delay="HomeBladeAnimationSpeed" condition="Window.Next(PVR)">WindowClose</animation>
 		</control>
 	</include>
-
+	
 </includes>

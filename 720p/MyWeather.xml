@@ -1,24 +1,22 @@
 <window id="2600">
 	<defaultcontrol always="true">99</defaultcontrol>
 	<allowoverlay>no</allowoverlay>	
-	<previouswindow>Weather</previouswindow>
-	<animation effect="fade" start="100" end="100" time="30" condition="Control.HasFocus(1)">WindowClose</animation>
-	<animation effect="fade" start="100" end="100" time="30" condition="Control.HasFocus(2)">WindowClose</animation>
 	<controls>
-		<include condition="!Skin.HasSetting(DontBlendBackground)">CommonVideoVizBackground</include>
+	    <include condition="!Skin.HasSetting(DontBlendBackground)">CommonVideoVizBackground</include>
 		<control type="group">
-			<animation effect="slide" start="0,0" end="-1280,0" time="HomeBladeAnimationSpeed" condition="Control.HasFocus(1)">Conditional</animation>
 			<include>CommonWeatherBackground</include>
 		</control>
-		<control type="group">
-			<visible>Control.HasFocus(1)</visible>
-			<animation effect="slide" start="1280,0" end="0,0" time="HomeBladeAnimationSpeed" condition="Control.HasFocus(1)">Conditional</animation>
-			<include>CommonAppsBackground</include>
-		</control>
 		<include condition="Skin.HasSetting(DontBlendBackground)">CommonVideoVizBackground</include>
-
-<!-- Blackwash Background -->
 		<control type="group">
+			<include>CommonWeatherBlackwash</include>
+			<!-- Date and time -->
+			<!-- To do: convert this into an include with PARAMS -->
+			<control type="group">
+		        <posx>1120</posx>
+			    <include>ClockTextCommons</include>
+			</control>
+		</control>
+<!--		<control type="group">
 			<animation effect="slide" end="50,0" time="0" condition="Control.HasFocus(1)">Conditional</animation>
 			<control type="image">
 				<description>Background</description>
@@ -47,10 +45,10 @@
 				<aspectratio>stretch</aspectratio>
 				<texture>background-overlay-blackwash-centertile-ws.png</texture>
 			</control>
-		</control>
+		</control> -->
 		<control type="group">
 			<posx>130</posx>
-			<visible>!Control.HasFocus(1)</visible>
+<!--			<visible>!Control.HasFocus(1)</visible> -->
 			<animation effect="fade" time="HomeVisibleFadeAnimationSpeed">WindowOpen</animation>
 			<control type="label">
 				<description>Header label</description>
@@ -58,11 +56,11 @@
 				<label>31013</label>
 				<include>HeaderTextCommons</include>
 			</control>
-			<control type="label">
+<!--			<control type="label">
 				<description>Time label</description>
 				<posx>930</posx>
 				<include>ClockTextCommons</include>
-			</control>
+			</control> -->
 			<control type="group" id="9000">
 				<posx>-30</posx>
 				<posy>120</posy>
@@ -163,7 +161,7 @@
 					<onup>4</onup>
 					<ondown>99</ondown>
 					<onleft>-</onleft>
-					<onright>1</onright>
+					<onright>-</onright>
 					<textoffsety>-12</textoffsety>
 					<disabledcolor>grey</disabledcolor>
 					<animation effect="slide" end="ButtonSlideBackDistance,0" time="ButtonSlideBackTime" reversible="false">focus</animation>
@@ -902,7 +900,7 @@
 		</control>
 
 
-		<control type="button" id="1">
+<!--		<control type="button" id="1">
 			<description>Blank Blade Slide Left</description>
 			<posx>80r</posx>
 			<posy>0</posy>
@@ -917,7 +915,6 @@
 		<control type="group">
 			<description>Weather Blades</description>
 			<visible>!Control.HasFocus(1)</visible>
-			<!-- Left side -->
 			<control type="image">
 				<posx>-110</posx>
 				<posy>-40</posy>
@@ -945,7 +942,6 @@
 				<aligny>middle</aligny>
 				<angle>270</angle>
 			</control>
-			<!-- Right side -->
 			<control type="image">
 				<posx>65r</posx>
 				<posy>-40</posy>
@@ -1016,7 +1012,6 @@
 		<control type="group">
 			<description>Apps Blades</description>
 			<visible>Control.HasFocus(1)</visible>
-			<!-- Left side -->
 			<control type="image">
 				<posx>-110</posx>
 				<posy>-40</posy>
@@ -1067,7 +1062,6 @@
 				<visible>Control.HasFocus(1)</visible>
 				<animation effect="fade" time="HomeBladeAnimationSpeed">visible</animation>
 			</control>
-			<!-- Right side -->
 			<control type="image">
 				<posx>65r</posx>
 				<posy>-40</posy>
@@ -1114,6 +1108,9 @@
 				<aligny>middle</aligny>
 				<angle>270</angle>
 			</control>
+		</control> -->
+		<control type="group">
+			<include>WeatherToSubBlades</include>
 		</control>
 		<include>Common_Now_Playing</include>
 	</controls>

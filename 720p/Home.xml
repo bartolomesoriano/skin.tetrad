@@ -26,7 +26,6 @@
 		<control type="group">
 			<animation effect="slide" end="-50,0" time="0" condition="Control.HasFocus(1)">Conditional</animation>
 			<animation effect="slide" end="50,0" time="0" condition="Control.HasFocus(2)">Conditional</animation>
-			<animation effect="slide" end="50,0" time="0" condition="Control.HasFocus(3)">Conditional</animation>
 			<control type="image">
 				<description>Background</description>
 				<posx>155</posx>
@@ -38,7 +37,7 @@
 			</control>
 			<control type="image">
 				<description>Background</description>
-				<posx>155r</posx>
+				<posx>105r</posx>
 				<posy>0</posy>
 				<width>50</width>
 				<height>720</height>
@@ -49,7 +48,7 @@
 				<description>Background</description>
 				<posx>205</posx>
 				<posy>0</posy>
-				<width>920</width>
+				<width>970</width>
 				<height>720</height>
 				<aspectratio>stretch</aspectratio>
 				<texture>background-overlay-blackwash-centertile-ws.png</texture>
@@ -59,7 +58,7 @@
 		<!-- Media Tab -->
 		<control type="group">
 			<posx>230</posx>
-			<visible>!Control.HasFocus(1) + !Control.HasFocus(3) + !Control.HasFocus(2)</visible>
+			<visible>!Control.HasFocus(1) + !Control.HasFocus(2)</visible>
 			<animation effect="fade" time="HomeVisibleFadeAnimationSpeed">WindowOpen</animation>
 			<control type="label">
 				<description>Header label</description>
@@ -69,7 +68,7 @@
 			</control>
 			<control type="label">
 				<description>Time label</description>
-				<posx>880</posx>
+				<posx>930</posx>
 				<include>ClockTextCommons</include>
 			</control>
 			<control type="group">
@@ -78,31 +77,43 @@
 				<include>WeatherCard</include>
 			</control>
 			<control type="group">
-				<posx>580</posx>
-				<posy>106</posy>
+				<posx>510</posx>
+				<posy>100</posy>
+				<control type="label">
+					<description>date label</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>380</width>
+					<height>30</height>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>font12</font>
+					<textcolor>white2</textcolor>
+					<label>$INFO[System.Date]</label>
+				</control>
 				<control type="image">
 					<description>Logo</description>
-					<posx>50</posx>
-					<posy>0</posy>
-					<width>150</width>
-					<height>101</height>
+					<posx>0</posx>
+					<posy>30</posy>
+					<width>380</width>
+					<height>70</height>
 					<aspectratio>keep</aspectratio>
-					<texture>tetradui_logo.png</texture>
+					<texture>xbmc_logo.png</texture>
 				</control>
 				<control type="image">
 					<description>Logo Mirror</description>
-					<posx>50</posx>
-					<posy>95</posy>
-					<width>150</width>
-					<height>101</height>
+					<posx>0</posx>
+					<posy>90</posy>
+					<width>380</width>
+					<height>70</height>
 					<aspectratio>keep</aspectratio>
-					<texture diffuse="diffuse_mirror2.png" flipy="true">tetradui_logo.png</texture>
+					<texture diffuse="diffuse_mirror2.png" flipy="true">xbmc_logo.png</texture>
 				</control>
 				<control type="image">
 					<description>Logo Shadow</description>
-					<posx>25</posx>
-					<posy>108</posy>
-					<width>200</width>
+					<posx>0</posx>
+					<posy>100</posy>
+					<width>380</width>
 					<height>16</height>
 					<texture>home_logoshadow.png</texture>
 				</control>
@@ -136,7 +147,7 @@
 					<width>450</width>
 					<height>314</height>
 					<onleft>1</onleft>
-					<onright>3</onright>
+					<onright>2</onright>
 					<onup>15</onup>
 					<ondown>15</ondown>
 					<viewtype label="535">list</viewtype>
@@ -271,6 +282,22 @@
 							<visible>Skin.HasSetting(MediaBlade_ShowSmartPlaylist2)</visible>
 						</item>
 						<item>
+							<label>31008</label>
+							<onclick>ActivateWindow(PVR)</onclick>
+							<icon>special://skin/button_icons/icon-tv.png</icon>
+							<thumb>-</thumb>
+							<visible>System.GetBool(pvrmanager.enabled)</visible>
+							<visible>!Skin.HasSetting(MediaBlade_HideLiveTV)</visible>
+						</item>
+						<item>
+							<label>20389</label>
+							<onclick>ActivateWindow(Videos,musicvideotitles,return)</onclick>
+							<icon>special://skin/button_icons/icon-music.png</icon>
+							<thumb>-</thumb>
+							<visible>Library.HasContent(musicvideos)</visible>
+							<visible>!Skin.HasSetting(MediaBlade_HideMusicVideos)</visible>
+						</item>
+						<item>
 							<label>2</label>
 							<onclick>ActivateWindow(Music)</onclick>
 							<icon>special://skin/button_icons/icon-music.png</icon>
@@ -301,17 +328,6 @@
 			<animation effect="slide" end="1280,0" time="HomeBladeAnimationSpeed">focus</animation>
 			<hitrect x="-10" y="-10" w="1" h="1" />
 		</control>
-		<control type="button" id="3">
-			<description>Blank Blade Slide Left</description>
-			<posx>80r</posx>
-			<posy>0</posy>
-			<width>160</width>
-			<height>720</height>
-			<texturefocus>blades-blank-right.png</texturefocus>
-			<onfocus>ActivateWindow(PVR)</onfocus>
-			<animation effect="slide" end="-1280,0" time="HomeBladeAnimationSpeed">focus</animation>
-			<hitrect x="-10" y="-10" w="1" h="1" />
-		</control>
 		<control type="button" id="2">
 			<description>Blank Blade Slide Left</description>
 			<posx>80r</posx>
@@ -325,7 +341,7 @@
 		</control>
 		
 		<control type="group">
-			<visible>!Control.HasFocus(1) + !Control.HasFocus(3) + !Control.HasFocus(2)</visible>
+			<visible>!Control.HasFocus(1) + !Control.HasFocus(2)</visible>
 			<!-- Left side -->
 			<control type="image">
 				<posx>-110</posx>
@@ -415,26 +431,6 @@
 				<label>31003</label>
 				<posx>50r</posx>
 				<posy>200</posy>
-				<font>font16</font>
-				<textcolor>black</textcolor>
-				<align>left</align>
-				<aligny>middle</aligny>
-				<angle>270</angle>
-			</control>
-			<!-- Live TV blade -->
-			<control type="image">
-				<posx>165r</posx>
-				<posy>-40</posy>
-				<width>115</width>
-				<height>800</height>
-				<aspectratio>stretch</aspectratio>
-				<texture>blades-size3-right-NF.png</texture>
-			</control>
-			<control type="label">
-				<description>Live TV Label</description>
-				<label>31007</label>
-				<posx>100r</posx>
-				<posy>190</posy>
 				<font>font16</font>
 				<textcolor>black</textcolor>
 				<align>left</align>

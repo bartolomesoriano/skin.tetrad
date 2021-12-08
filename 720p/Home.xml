@@ -22,18 +22,6 @@
 			<include>CommonAppsBackground</include>
 		</control>
 		<include condition="Skin.HasSetting(DontBlendBackground)">CommonVideoVizBackground</include>
-		<control type="label">
-			<description>date label</description>
-			<posx>855</posx>
-			<posy>6</posy>
-			<width>380</width>
-			<height>30</height>
-			<align>center</align>
-			<aligny>center</aligny>
-			<font>font12</font>
-			<textcolor>white</textcolor>
-			<label>$INFO[System.Date]</label>
-		</control>
 <!-- Blackwash Background -->
 		<control type="group">
 			<animation effect="slide" end="-50,0" time="0" condition="Control.HasFocus(1)">Conditional</animation>

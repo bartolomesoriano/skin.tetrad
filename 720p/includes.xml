@@ -517,6 +517,61 @@
 		</control>
 	</include>
 
+
+    <include name="CommonPowerPanel">
+	    <control type="group">
+			<posx>30</posx>
+			<posy>558</posy>
+			<control type="button" id="15">
+				<description>Shutdown Button</description>
+				<posx>5</posx>
+				<posy>0</posy>
+				<width>70</width>
+				<height>70</height>
+				<texturenofocus>-</texturenofocus>
+				<texturefocus>wide-thumb-focus.png</texturefocus>
+				<onclick>ActivateWindow(ShutdownMenu)</onclick>
+				<onleft>9000</onleft>
+				<onup>9000</onup>
+				<ondown>9000</ondown>
+			</control>
+			<control type="image">
+				<description>Icon</description>
+				<posx>10</posx>
+				<posy>5</posy>
+				<width>60</width>
+				<height>60</height>
+				<aspectratio>keep</aspectratio>
+				<texture>special://skin/button_icons/icon-power.png</texture>
+			</control>
+			<control type="group">
+			    <posx>70</posx>
+				<posy>15</posy>
+				<animation effect="fade" start="100" end="0" time="200" condition="Control.HasFocus(15)">Conditional</animation>
+				<control type="image">
+				    <posx>0</posx>
+				    <posy>0</posy>
+				    <width>790</width>
+				    <height>40</height>
+				    <aspectratio>stretch</aspectratio>
+				    <texture>thumb-nofocus.png</texture>
+			    </control>
+			    <control type="rss">
+			        <description>rss feed</description>
+			        <posx>5</posx>
+			        <posy>4</posy>
+			        <width>780</width>
+			        <font>font13</font>
+			        <urlset>1</urlset>
+			        <textcolor>grey</textcolor>
+			        <titlecolor>grey</titlecolor>
+			        <headlinecolor>white</headlinecolor>
+			        <shadowcolor>black</shadowcolor>
+		        </control>
+			</control>
+		</control>
+	</include>
+
 	<include name="CommonDVDTray">
 		<control type="image">
 			<description>DVDTray Circle</description>

@@ -280,7 +280,7 @@
 					</content>
 				</control>
 			</control>
-			<include>CommonDVDTray</include>
+			<include>CommonPowerPanel</include>
 		</control>
 
         <!-- Button to go Left to Games blade -->

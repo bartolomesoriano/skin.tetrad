@@ -286,6 +286,41 @@
 			<animation effect="zoom" start="105,0,1120,720" end="205,0,970,720" time="HomeBladeAnimationSpeed" condition="Window.Next(Home)">WindowClose</animation>
 		</control>
 	</include>
+	<include name="CommonGamesBlackwash">
+		<control type="image">
+			<description>Background</description>
+			<posx>55</posx>
+			<posy>0</posy>
+			<width>50</width>
+			<height>720</height>
+			<aspectratio>stretch</aspectratio>
+			<texture>background-overlay-blackwash-left-ws.png</texture>
+			<animation effect="slide" start="100,0" end="0,0" time="HomeBladeAnimationSpeed" condition="Window.Previous(1112)">WindowOpen</animation>
+			<animation effect="slide" start="0,0" end="100,0" time="HomeBladeAnimationSpeed" condition="Window.Next(1112)">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>Background</description>
+			<posx>55r</posx>
+			<posy>0</posy>
+			<width>50</width>
+			<height>720</height>
+			<aspectratio>stretch</aspectratio>
+			<texture>background-overlay-blackwash-right-ws.png</texture>
+			<animation effect="slide" start="-50,0" end="0,0" time="HomeBladeAnimationSpeed" condition="Window.Previous(1112)">WindowOpen</animation>
+			<animation effect="slide" start="0,0" end="-50,0" time="HomeBladeAnimationSpeed" condition="Window.Next(1112)">WindowClose</animation>
+		</control>
+		<control type="image">
+			<description>Background</description>
+			<posx>105</posx>
+			<posy>0</posy>
+			<width>1120</width>
+			<height>720</height>
+			<aspectratio>stretch</aspectratio>
+			<texture>background-overlay-blackwash-centertile-ws.png</texture>
+			<animation effect="zoom" start="205,0,970,720" end="105,0,1120,720" time="HomeBladeAnimationSpeed" condition="Window.Previous(1112)">WindowOpen</animation>
+			<animation effect="zoom" start="105,0,1120,720" end="205,0,970,720" time="HomeBladeAnimationSpeed" condition="Window.Next(1112)">WindowClose</animation>
+		</control>
+	</include>
 	<include name="CommonLiveTVBlackwash">
 		<control type="image">
 			<description>Background</description>
@@ -1135,7 +1170,7 @@
 	
 	<include name="LiveTVToSubBlades">
 		<!-- Left side -->
-		<control type="image">
+<!--		<control type="image">
 			<posx>-110</posx>
 			<posy>-40</posy>
 			<width>180</width>
@@ -1221,7 +1256,7 @@
 			<aspectratio>stretch</aspectratio>
 			<texture>blades-runner-left1.png</texture>
 			<animation effect="fade" start="100" end="0" time="100" delay="HomeBladeAnimationSpeed" condition="Window.Next(PVR)">WindowClose</animation>
-		</control>
+		</control> -->
 		<control type="image">
 			<posx>0</posx>
 			<posy>-40</posy>
@@ -1258,7 +1293,7 @@
 			</animation>
 		</control>
 		<!-- Right side -->
-		<control type="image">
+<!--		<control type="image">
 			<posx>55r</posx>
 			<posy>-40</posy>
 			<width>180</width>
@@ -1309,6 +1344,185 @@
 			<aspectratio>stretch</aspectratio>
 			<texture>blades-runner-right.png</texture>
 			<animation effect="fade" start="100" end="0" time="100" delay="HomeBladeAnimationSpeed" condition="Window.Next(PVR)">WindowClose</animation>
+		</control> -->
+	</include>
+	
+	<include name="GamesToSubBlades">
+		<!-- Left side -->
+		<control type="image">
+			<posx>-110</posx>
+			<posy>-40</posy>
+			<width>180</width>
+			<height>800</height>
+			<aspectratio>stretch</aspectratio>
+			<texture>blades-runner-left.png</texture>
+		</control>
+		<control type="image">
+			<posx>-50</posx>
+			<posy>-40</posy>
+			<width>115</width>
+			<height>800</height>
+			<aspectratio>stretch</aspectratio>
+			<texture>blades-size3-left-NF.png</texture>
+			<animation type="WindowOpen" condition="Window.Previous(1112)">
+				<effect type="slide" start="50,0" end="60,0" time="100" />
+				<effect type="slide" start="0,0" end="-60,0" delay="100" time="HomeBladeAnimationSpeed" />
+			</animation>
+			<animation type="WindowClose" condition="Window.Next(1112)">
+				<effect type="slide" start="0,0" end="60,0" time="100" />
+				<effect type="slide" start="0,0" end="-10,0" delay="100" time="HomeBladeAnimationSpeed" />
+			</animation>
+		</control>
+		<control type="label">
+			<description>apps Label</description>
+			<label>31002</label>
+			<posx>40</posx>
+			<posy>190</posy>
+			<font>font16</font>
+			<textcolor>black</textcolor>
+			<align>left</align>
+			<aligny>middle</aligny>
+			<angle>270</angle>
+			<animation type="WindowOpen" condition="Window.Previous(1112)">
+				<effect type="slide" start="50,0" end="60,0" time="100" />
+				<effect type="slide" start="0,0" end="-60,0" delay="100" time="HomeBladeAnimationSpeed" />
+			</animation>
+			<animation type="WindowClose" condition="Window.Next(1112)">
+				<effect type="slide" start="0,0" end="60,0" time="100" />
+				<effect type="slide" start="0,0" end="-10,0" delay="100" time="HomeBladeAnimationSpeed" />
+			</animation>
+		</control>
+		<control type="image">
+			<posx>-120</posx>
+			<posy>-40</posy>
+			<width>180</width>
+			<height>800</height>
+			<aspectratio>stretch</aspectratio>
+			<texture>blades-runner-left1.png</texture>
+			<animation effect="fade" start="100" end="0" time="100" delay="HomeBladeAnimationSpeed" condition="Window.Next(1112)">WindowClose</animation>
+		</control>
+		<control type="image">
+			<posx>-0</posx>
+			<posy>-40</posy>
+			<width>115</width>
+			<height>800</height>
+			<aspectratio>stretch</aspectratio>
+			<texture>blades-size4-header.png</texture>
+			<animation type="WindowOpen" condition="Window.Previous(1112)">
+				<effect type="slide" start="50,0" end="60,0" time="100" />
+				<effect type="slide" start="0,0" end="-60,0" delay="100" time="HomeBladeAnimationSpeed" />
+			</animation>
+			<animation type="WindowClose" condition="Window.Next(1112)">
+				<effect type="slide" start="0,0" end="60,0" time="100" />
+				<effect type="slide" start="0,0" end="-10,0" delay="100" time="HomeBladeAnimationSpeed" />
+			</animation>
+		</control>
+		<control type="label">
+			<description>Games Label</description>
+			<label>31009</label>
+			<posx>90</posx>
+			<posy>170</posy>
+			<font>font16</font>
+			<textcolor>black</textcolor>
+			<align>left</align>
+			<aligny>middle</aligny>
+			<angle>270</angle>
+			<animation type="WindowOpen" condition="Window.Previous(1112)">
+				<effect type="slide" start="50,0" end="60,0" time="100" />
+				<effect type="slide" start="0,0" end="-60,0" delay="100" time="HomeBladeAnimationSpeed" />
+			</animation>
+			<animation type="WindowClose" condition="Window.Next(1112)">
+				<effect type="slide" start="0,0" end="60,0" time="100" />
+				<effect type="slide" start="0,0" end="-10,0" delay="100" time="HomeBladeAnimationSpeed" />
+			</animation>
+		</control>
+		<!-- Right side -->
+		<control type="image">
+			<posx>55r</posx>
+			<posy>-40</posy>
+			<width>180</width>
+			<height>800</height>
+			<aspectratio>stretch</aspectratio>
+			<texture>blades-runner-right.png</texture>
+		</control>
+		<control type="image">
+			<posx>15r</posx>
+			<posy>-40</posy>
+			<width>115</width>
+			<height>800</height>
+			<aspectratio>stretch</aspectratio>
+			<texture>blades-size2-right-NF.png</texture>
+			<animation type="WindowOpen" condition="Window.Previous(1112)">
+				<effect type="slide" start="-100,0" end="-110,0" time="100" />
+				<effect type="slide" start="0,0" end="100,0" delay="100" time="HomeBladeAnimationSpeed" />
+			</animation>
+			<animation type="WindowClose" condition="Window.Next(1112)">
+				<effect type="slide" start="0,0" end="-110,0" time="100" />
+				<effect type="slide" start="0,0" end="10,0" delay="100" time="HomeBladeAnimationSpeed" />
+			</animation>
+		</control>
+		<control type="label">
+			<description>System Label</description>
+			<label>31003</label>
+			<posx>-50r</posx>
+			<posy>200</posy>
+			<font>font16</font>
+			<textcolor>black</textcolor>
+			<align>left</align>
+			<aligny>middle</aligny>
+			<angle>270</angle>
+			<animation type="WindowOpen" condition="Window.Previous(1112)">
+				<effect type="slide" start="-100,0" end="-110,0" time="100" />
+				<effect type="slide" start="0,0" end="100,0" delay="100" time="HomeBladeAnimationSpeed" />
+			</animation>
+			<animation type="WindowClose" condition="Window.Next(1112)">
+				<effect type="slide" start="0,0" end="-110,0" time="100" />
+				<effect type="slide" start="0,0" end="10,0" delay="100" time="HomeBladeAnimationSpeed" />
+			</animation>
+		</control>
+		<control type="image">
+			<posx>65r</posx>
+			<posy>-40</posy>
+			<width>115</width>
+			<height>800</height>
+			<aspectratio>stretch</aspectratio>
+			<texture>blades-size3-right-NF.png</texture>
+			<animation type="WindowOpen" condition="Window.Previous(1112)">
+				<effect type="slide" start="-100,0" end="-110,0" time="100" />
+				<effect type="slide" start="0,0" end="110,0" delay="100" time="HomeBladeAnimationSpeed" />
+			</animation>
+			<animation type="WindowClose" condition="Window.Next(1112)">
+				<effect type="slide" start="0,0" end="-110,0" time="100" />
+				<effect type="slide" start="0,0" end="10,0" delay="100" time="HomeBladeAnimationSpeed" />
+			</animation>
+		</control>
+		<control type="label">
+			<description>Media Label</description>
+			<label>31001</label>
+			<posx>0r</posx>
+			<posy>190</posy>
+			<font>font16</font>
+			<textcolor>black</textcolor>
+			<align>left</align>
+			<aligny>middle</aligny>
+			<angle>270</angle>
+			<animation type="WindowOpen" condition="Window.Previous(1112)">
+				<effect type="slide" start="-100,0" end="-110,0" time="100" />
+				<effect type="slide" start="0,0" end="110,0" delay="100" time="HomeBladeAnimationSpeed" />
+			</animation>
+			<animation type="WindowClose" condition="Window.Next(1112)">
+				<effect type="slide" start="0,0" end="-110,0" time="100" />
+				<effect type="slide" start="0,0" end="10,0" delay="100" time="HomeBladeAnimationSpeed" />
+			</animation>
+		</control>
+		<control type="image">
+			<posx>55r</posx>
+			<posy>-40</posy>
+			<width>180</width>
+			<height>800</height>
+			<aspectratio>stretch</aspectratio>
+			<texture>blades-runner-right.png</texture>
+			<animation effect="fade" start="100" end="0" time="100" delay="HomeBladeAnimationSpeed" condition="Window.Next(1112)">WindowClose</animation>
 		</control>
 	</include>
 	

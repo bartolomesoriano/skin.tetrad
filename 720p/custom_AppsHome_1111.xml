@@ -279,7 +279,7 @@
 					</content>
 				</control>
 			</control>
-			<include>CommonDVDTray</include>
+			<include>CommonPowerPanel</include>
 		</control>
 		
 		<control type="button" id="1">
